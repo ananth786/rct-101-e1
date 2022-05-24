@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./tasks.module.css";
+import TaskApp from "../TaskApp";
 
-const Tasks = () => {
+
+const Tasks = ({item}) => {
   // NOTE: do not delete `data-cy` key value pair
   return (
     <>
@@ -10,6 +12,7 @@ const Tasks = () => {
       </ul>
       <div data-cy="tasks-empty" className={styles.empty}>
         {/* Show when No Tasks are present */}
+        <p>{item}</p>
       </div>
     </>
   );
